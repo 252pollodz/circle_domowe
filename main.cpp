@@ -1,34 +1,25 @@
 #include <iostream>
-#include "Point.h"
+#include "Circle.h"
 using namespace std;
 
-int main()
+int main() {
+    Circle circles[5] {
+        Circle("c1",0,0,10),
+        Circle("c2",0,-10,15)
+    };
+
+
+cout << "Istnieje " << Circle::numberOfCircles<< " okregow "<< endl;
+
+for (int i = 0; i < 5; i++)
 {
-    Point points[10] = {
-        Point("P1", 0, 0),
-        Point("P2", 10, 20),
-        Point("P3", 30, 40),
-        Point("P4", 50, 60),
-        Point("P5", 70, 80),
-        Point(),
-        Point(),
-        Point("P8",15,25)
-      };
+    circles[i].show();
+}
 
-    cout << "Istnieje " << Point::numberOfPoints() << " punktow."<< endl;
-
-    for (int i = 0; i < 10; i++)
-    {
-        points[i].show();
-    }
+Circle circle3("c3",59,25,12);
+    circle3.show();
 
 
-    {
-        Point p1, p2, p3;
-        cout << endl;
-        cout << "Teraz istnieje " << Point::numberOfPoints() << " punktow." << endl;
-    }
 
-    cout << "A teraz istnieje " << Point::numberOfPoints() << " punktow." << endl;
 
 }
